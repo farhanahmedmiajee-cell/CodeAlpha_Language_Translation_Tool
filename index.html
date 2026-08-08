@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Powered Language Translation Tool</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="window-titlebar">
+      <div class="window-buttons">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <div class="window-label">Cosmic Translator</div>
+    </div>
+
+    <header>
+      <h2><i class="fa-solid fa-robot"></i> AI Language Translator</h2>
+      <p class="subtitle">AI-Powered Neural Machine Translation & Speech Engine</p>
+    </header>
+
+    <div class="feature-card">
+      <div class="feature-badge">Premium AI</div>
+      <div class="feature-items">
+        <span>Smart auto language detection</span>
+        <span>Fast responsive translation</span>
+        <span>Copy, listen, and swap with ease</span>
+      </div>
+    </div>
+    
+    <div class="wrapper">
+      <div class="text-input">
+        <div class="input-box" data-label="Source Text">
+          <textarea id="from-text" spellcheck="false" placeholder="Type text here (AI will auto-detect language for you)..."></textarea>
+          <div class="text-info">Chars: <span id="char-count">0</span></div>
+        </div>
+        
+        <div class="input-box" data-label="Translated Text">
+          <textarea id="to-text" spellcheck="false" placeholder="AI Translation..." readonly></textarea>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="row from">
+          <select id="from-lang" class="lang-select"></select>
+          <span class="detected-badge" id="detected-lang">Detected: Auto</span>
+          <div class="icons">
+            <i id="from-volume" class="fas fa-volume-up" title="Listen"></i>
+            <i id="from-copy" class="fas fa-copy" title="Copy"></i>
+          </div>
+        </div>
+
+        <div class="exchange"><i class="fas fa-right-left"></i></div>
+
+        <div class="row to">
+          <select id="to-lang"></select>
+          <div class="icons">
+            <i id="to-copy" class="fas fa-copy" title="Copy"></i>
+            <i id="to-volume" class="fas fa-volume-up" title="Listen"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button id="translate-btn">
+      <span id="btn-text">Translate with AI</span>
+      <div class="spinner" id="spinner"></div>
+    </button>
+
+    <div class="recent-panel">
+      <div class="recent-header">
+        <span>Recent translations</span>
+        <button id="clear-recent" type="button" title="Clear history">Clear</button>
+      </div>
+      <div id="recent-list" class="recent-list">
+        <p class="recent-empty">No recent translations yet.</p>
+      </div>
+    </div>
+      </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
